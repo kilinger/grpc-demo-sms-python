@@ -1,0 +1,44 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-10-24 09:42+0800\n"
+"PO-Revision-Date: 2016-10-20 15:09+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: sms/models/core.py:14
+msgid "Ordinary"
+msgstr "普通"
+
+#: sms/models/core.py:15
+msgid "Captcha"
+msgstr "验证码"
+
+#: sms/models/core.py:16
+msgid "Retrieve password"
+msgstr "找回密码"
+
+#: sms/models/core.py:17
+msgid "Verify Phone"
+msgstr "验证手机号"
+
+#: sms/models/core.py:53
+msgid "single billing"
+msgstr "单条计费"
+
+#: sms/models/core.py:54
+msgid "fixed billing"
+msgstr "固定计费"
+

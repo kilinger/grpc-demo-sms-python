@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.sms";
+option java_outer_classname = "SMSProto";
+option objc_class_prefix = "HLW";
+
+package sms;
+
+service SmsServer {
+  rpc Send (SmsRequest) returns (SmsReply) {}
+  rpc Captcha (CaptchaRequest) returns (SmsReply) {}
+  rpc RetrievePassword (RetrievePasswordRequest) returns (SmsReply) {}
+  rpc VerifyPhone (VerifyPhoneRequest) returns (SmsReply) {}
+  rpc Inquire (InquireRequest) returns (InquireReply) {}
+}
+
+message VerifyPhoneRequest {
+  string tel = 1;
+  string code = 2;
+  string minute = 3;
+  string company = 4;
+  string sender = 5;
+}
+
+message RetrievePasswordRequest {
+  string tel = 1;
+  string code = 2;
+  string minute = 3;
+  string sender = 4;
+}
+
+message CaptchaRequest {
+  string tel = 1;
+  string code = 2;
+  string minute = 3;
+  string sender = 4;
+}
+
+message SmsRequest {
+  string tel = 1;
+  string msg = 2;
+  string sender = 3;
+}
+
+message Empty {}
+
+message Error {
+  oneof error {
+    string tel = 1;
+    string msg = 2;
+    string sender = 3;
+    string minute = 4;
+    string code = 5;
+    string company = 6;
+    string default = 7;
+  }
+}
+
+message SmsReply {
+  oneof msg {
+    string uuid = 1;
+    Error error = 2;
+  }
+}
+
+message InquireRequest {
+  string uuid = 1;
+}
+
+message InquireReply {
+  int64 status = 1;
+}
